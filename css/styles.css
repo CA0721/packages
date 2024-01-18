@@ -1,0 +1,202 @@
+body {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background-color: #1b2144;
+}
+
+a {
+  color: inherit; /* Hereda el color del texto del elemento padre */
+  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+}
+
+a:hover {
+  text-decoration: underline; /* Agrega un subrayado al pasar el mouse sobre el enlace */
+}
+
+.barra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #33333300; /* Ajusta el color de fondo según tus necesidades */
+  margin-bottom: 10px; /* Espaciado entre las barras */
+  color: white;
+  font-size: 18px;
+}
+
+.contenido {
+  max-width: 100%; /* Ajusta según tus necesidades */
+}
+
+/* Estilo para pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .barra {
+    height: 100px;
+  }
+
+  .contenido {
+    max-width: 728px;
+    height: 90px;
+  }
+}
+
+/* Estilo para pantallas más pequeñas */
+@media screen and (max-width: 767px) {
+  .barra {
+    height: 60px;
+  }
+
+  .contenido {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+
+.container {
+  margin-top: 10vh; /* Ajusta según sea necesario para el espacio deseado en la parte superior */
+  text-align: center;
+}
+
+
+.cronometro-container {
+  position: relative;
+  width: 80px; /* Ajusta el tamaño del círculo según tus necesidades */
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #e7e7e7; /* Añadido: borde del círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Espacio entre el cronómetro y el botón */
+  opacity: 1; /* Añadido: opacidad inicial */
+  transition: opacity 0.5s ease-in-out; /* Añadido: transición de opacidad */
+}
+
+#cronometro {
+  font-size: 40px;
+  color: #e7e7e7;
+}
+
+
+.message-overlay {
+  top: 10;
+  left: 0;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+  color: #e7e7e7;
+  background: rgba(255, 255, 255, 0); /* Ajusta el color y la opacidad según tus necesidades */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.message-overlay h2 {
+  margin-bottom: 10px;
+}
+
+.message-overlay p {
+  text-align: center;
+  line-height: 1.5; /* Ajusta según sea necesario para centrar verticalmente el texto */
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+
+button {
+  font-family: inherit;
+  font-size: 18px;
+  background: linear-gradient(to bottom, #4dc7d9 0%, #66a6ff 100%);
+  color: white;
+  padding: 0.5em 2em; /* Ajusta la anchura del padding según sea necesario */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  margin-right: 30px; /* Ajusta la separación entre los botones según sea necesario */
+}
+
+button span {
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+button svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+button .svg-wrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+button:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button:hover svg {
+  transform: rotate(45deg);
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #151a35;
+  color: #e7e7e7;
+  padding: 10px;
+  box-sizing: border-box; /* Agrega esta línea */
+}
+
+#footer .copyright {
+  letter-spacing: 0.2rem;
+  font-size: 0.6rem;
+  opacity: 0.75;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+
+
+.hide {
+  opacity: 0 !important; /* Añadido: opacidad cero para ocultar el círculo */
+  pointer-events: none; /* Añadido: deshabilitar eventos en el círculo oculto */
+  border-width: 0; /* Añadido: eliminar el borde al ocultar */
+}
