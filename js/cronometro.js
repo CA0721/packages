@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function() {
         window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
         window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
-      }, 6000);
+      }, 5000);
 
   const boton = document.getElementById('boton');
   const cronometroElement = document.getElementById('cronometro');
@@ -86,6 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  let tiempoRestante = 12;
+  let tiempoRestante = 10;
   let intervalo = setInterval(actualizarCronometro, 1000);
 });
