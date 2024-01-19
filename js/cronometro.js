@@ -1,16 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-    // function redirect() {
-    //     window.location.href = obtenerEnlace(2);
-    //     window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
-    //     window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
-    // }
-    // setTimeout(redirect, 25000);
-
-    setTimeout(function() {
-        window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+    function redirect() {
+        window.location.href = obtenerEnlace(2);
         window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
-      }, 7000);
+        window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+    } setTimeout(redirect, 25000);
+
+    // setTimeout(function() {
+    //     window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+    //     window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
+    //   }, 7000);
 
   const boton = document.getElementById('boton');
   const cronometroElement = document.getElementById('cronometro');
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function abrirEnlaces() {
     // Abre cada enlace en una nueva ventana
     window.open(obtenerEnlace(1), '_blank');
-    window.open(obtenerEnlace(2), '_blank');
+    window.location.href = obtenerEnlace(2);
     window.open(obtenerEnlace(3), '_blank');
   }
 
