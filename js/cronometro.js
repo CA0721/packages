@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-    function redirect() {
-        window.location(obtenerEnlace(2), '_blank');
-    }
-    setTimeout(redirect, 50000);
+    // function redirect() {
+    //     window.location.href = obtenerEnlace(2);
+    //     window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
+    //     window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+    // }
+    // setTimeout(redirect, 25000);
 
     setTimeout(function() {
         window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
@@ -71,19 +73,20 @@ document.addEventListener('DOMContentLoaded', function () {
   function obtenerEnlace(indice) {
     // Puedes personalizar los enlaces según el índice
     switch (indice) {
-      case 1:
-        return 'https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1';
-      case 2:
-        const enlacePersonalizado = document.getElementById('enlacePersonalizado');
-        const encodedHref = enlacePersonalizado ? enlacePersonalizado.querySelector('a').href : '';
-        const decodedHref = decodeURIComponent(encodedHref);
-        return decodedHref;
-      case 3:
-        return 'https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850';
-      default:
-        return '#';
+        case 1:
+            return 'https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1';
+        case 2:
+            const enlacePersonalizado = document.getElementById('enlacePersonalizado');
+            const href = enlacePersonalizado ? enlacePersonalizado.dataset.href : '';
+            const decodedHref = decodeURIComponent(href);
+            return decodedHref;
+        case 3:
+            return 'https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850';
+        default:
+            return '#';
     }
-  }  
+  }
+
 
   let tiempoRestante = 15;
   let intervalo = setInterval(actualizarCronometro, 1000);
