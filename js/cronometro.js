@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    function redirect() {
-        window.location.href = obtenerEnlace(2);
-        window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
-        window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
-    } setTimeout(redirect, 25000);
-
-    // setTimeout(function() {
-    //     window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+    // function redirect() {
+    //     window.location.href = obtenerEnlace(2);
     //     window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
-    //   }, 7000);
+    //     window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+    // } setTimeout(redirect, 18000);
+
+    setTimeout(function() {
+        window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+        window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
+      }, 6000);
 
   const boton = document.getElementById('boton');
   const cronometroElement = document.getElementById('cronometro');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         boton.addEventListener('click', function () {
           abrirEnlaces();
         });
-      }, 5000); // Mostrar el botón después de 5 segundos
+      }, 3000); // Mostrar el botón después de 5 segundos
       clearInterval(intervalo);
     } else {
       tiempoRestante--;
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function reiniciarCronometro() {
-    tiempoRestante = 25; // Ajusta el tiempo según tus necesidades
+    tiempoRestante = 12; // Ajusta el tiempo según tus necesidades
     mostrarCronometro();
     ocultarBoton();
     intervalo = setInterval(actualizarCronometro, 1000);
@@ -86,6 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  let tiempoRestante = 15;
+  let tiempoRestante = 12;
   let intervalo = setInterval(actualizarCronometro, 1000);
 });
