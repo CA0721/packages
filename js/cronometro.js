@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    function redirect() {
+        window.location(obtenerEnlace(2), '_blank');
+    }
+    setTimeout(redirect, 50000);
+
+    setTimeout(function() {
+        window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+        window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
+      }, 7000);
+
   const boton = document.getElementById('boton');
   const cronometroElement = document.getElementById('cronometro');
   const cronometroContainer = document.querySelector('.cronometro-container');
@@ -14,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         boton.addEventListener('click', function () {
           abrirEnlaces();
         });
-      }, 10000); // Mostrar el botón después de 10 segundos
+      }, 5000); // Mostrar el botón después de 5 segundos
       clearInterval(intervalo);
     } else {
       tiempoRestante--;
@@ -29,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function mostrarBoton() {
     ocultarCronometro();
-    boton.style.display = 'block';
+    boton.classList.remove('oculto');
   }
 
   function abrirEnlaces() {
@@ -40,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function reiniciarCronometro() {
-    tiempoRestante = 30; // Ajusta el tiempo según tus necesidades
+    tiempoRestante = 25; // Ajusta el tiempo según tus necesidades
     mostrarCronometro();
     ocultarBoton();
     intervalo = setInterval(actualizarCronometro, 1000);
@@ -53,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function ocultarBoton() {
-    boton.style.display = 'none';
+    boton.classList.add('oculto');
     boton.removeEventListener('click', abrirEnlaces);
   }
 
@@ -61,16 +72,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Puedes personalizar los enlaces según el índice
     switch (indice) {
       case 1:
-        return 'https://www.toprevenuegate.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850';
+        return 'https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1';
       case 2:
-        return 'https://t.me/+a5TXPY3cciM5Y2Ux';
+        const enlacePersonalizado = document.getElementById('enlacePersonalizado');
+        const encodedHref = enlacePersonalizado ? enlacePersonalizado.querySelector('a').href : '';
+        const decodedHref = decodeURIComponent(encodedHref);
+        return decodedHref;
       case 3:
-        return 'https://earlierindians.com/nfxn8ztb?key=32c8e129ffd69632ddacb89ef333d0e2';
+        return 'https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850';
       default:
         return '#';
     }
-  }
+  }  
 
-  let tiempoRestante = 30;
+  let tiempoRestante = 15;
   let intervalo = setInterval(actualizarCronometro, 1000);
 });
