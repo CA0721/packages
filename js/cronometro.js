@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // } setTimeout(redirect, 18000);
 
     setTimeout(function() {
-        window.open('https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
-        window.open('https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
+        window.open('https://yogapersuasive.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1', '_blank');
+        window.open('https://yogapersuasive.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850', '_blank');
       }, 5000);
 
   const boton = document.getElementById('boton');
@@ -72,14 +72,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Puedes personalizar los enlaces según el índice
     switch (indice) {
         case 1:
-            return 'https://earlierindians.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1';
+            return 'https://yogapersuasive.com/kqfmbbytt0?key=300aeea28d2a83dd1e93dcbbcc6ae6a1';
         case 2:
             const enlacePersonalizado = document.getElementById('enlacePersonalizado');
             const href = enlacePersonalizado ? enlacePersonalizado.dataset.href : '';
             const decodedHref = decodeURIComponent(href);
             return decodedHref;
         case 3:
-            return 'https://earlierindians.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850';
+            return 'https://yogapersuasive.com/y4wyy4s1?key=badd1759f5f76ac901c9b03e77994850';
         default:
             return '#';
     }
