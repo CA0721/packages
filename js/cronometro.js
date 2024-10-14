@@ -87,19 +87,27 @@ document.addEventListener('DOMContentLoaded', function () {
     let tiempoRestante = 10;
     let intervalo = setInterval(actualizarCronometro, 1000);
 
-    // Añadir dinámicamente el script de invoke.js y el contenedor de div
-    const invokeScript = document.createElement('script');
-    invokeScript.src = '//yogapersuasive.com/d541a33e190028f9bdf41429dda3c8e9/invoke.js';
-    invokeScript.async = true;
-    invokeScript.setAttribute('data-cfasync', 'false');
-    document.body.appendChild(invokeScript);
+// Agrega los scripts y el div al final del body
+document.addEventListener('DOMContentLoaded', function () {
+    // Crear el primer script
+    const script1 = document.createElement('script');
+    script1.type = 'text/javascript';
+    script1.src = '//yogapersuasive.com/e2/c5/6d/e2c56d2b7b29adf67dad00dff78adb61.js';
 
-    const invokeContainer = document.createElement('div');
-    invokeContainer.id = 'container-d541a33e190028f9bdf41429dda3c8e9';
-    document.body.appendChild(invokeContainer);
+    // Crear el segundo script con atributos
+    const script2 = document.createElement('script');
+    script2.async = true;
+    script2.setAttribute('data-cfasync', 'false');
+    script2.src = '//yogapersuasive.com/d541a33e190028f9bdf41429dda3c8e9/invoke.js';
 
-    // Añadir dinámicamente el script e2c56d2b7b29adf67dad00dff78adb61.js
-    const otherScript = document.createElement('script');
-    otherScript.src = '//yogapersuasive.com/e2/c5/6d/e2c56d2b7b29adf67dad00dff78adb61.js';
-    document.body.appendChild(otherScript);
+    // Crear el div asociado con el segundo script
+    const divContainer = document.createElement('div');
+    divContainer.id = 'container-d541a33e190028f9bdf41429dda3c8e9';
+
+    // Insertar el primer script justo antes de cerrar el body
+    document.body.appendChild(script1);
+
+    // Insertar el div y el segundo script justo antes de cerrar el body
+    document.body.appendChild(divContainer);
+    document.body.appendChild(script2);
 });
